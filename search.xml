@@ -48,17 +48,17 @@
 <div class="gallery-group-main">
 
   <figure class="gallery-group">
-  <img class="gallery-group-img no-lightbox" src="https://i.loli.net/2019/11/10/T7Mu8Aod3egmC4Q.png" alt="Group Image Gallery">
+  <img class="gallery-group-img no-lightbox" src="https://raw.githubusercontent.com/liluoaikunbang/images/master/imgs/%E5%AF%B9%E4%B8%8D%E8%B5%B7%EF%BC%8C%E6%88%91%E4%B8%8D%E8%AF%B4%E4%BA%86.jpg" alt="Group Image Gallery">
   <figcaption>
   <div class="gallery-group-name">表情</div>
   <p>表情包收藏</p>
-  <a href="/study_of_liluo/emoji/binding"></a>
+  <a href="/study_of_liluo/emoji/emoji"></a>
   </figcaption>
   </figure>
   
 
   <figure class="gallery-group">
-  <img class="gallery-group-img no-lightbox" src="https://i.loli.net/2019/12/25/8t97aVlp4hgyBGu.jpg" alt="Group Image Gallery">
+  <img class="gallery-group-img no-lightbox" src="https://raw.githubusercontent.com/liluoaikunbang/images/master/imgs/%E6%B2%90%E6%B2%90%E6%98%AF%E4%B8%AAm%E5%91%A6%7E.jpg" alt="Group Image Gallery">
   <figcaption>
   <div class="gallery-group-name">截图</div>
   <p>聊天时的有趣截图</p>
