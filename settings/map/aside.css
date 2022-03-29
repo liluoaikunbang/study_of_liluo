@@ -1,0 +1,42 @@
+#aside-btn {
+    position: absolute;
+    top: 22%;
+    left: 298px;
+    height: 75px;
+    border: 0;
+    border-left: 1px solid rgb(23, 32, 43, 0.2);
+    background: #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.box {
+    float: left;
+    position: fixed;
+    left: 0;
+    height: 1000px;
+    width: 300px;
+    margin-left: 0;
+    display: block;
+    background-color: #000000;
+    -moz-transition: margin-left 1s;
+    transition: margin-left 1s;
+    grid-column: 1 / 2;
+    z-index: 10;
+}
+
+.aside-content {
+    height: 40px;
+    line-height: 40px;
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    list-style-type: none;
+    text-align: center;
+}
+
+.aside-inside-content {
+    color: #FFFFFF;
+    display: block;
+}

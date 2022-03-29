@@ -1,0 +1,4 @@
+Game_name:关于奇怪庙宇的对话记录;
+Game_key:0f86fdGd;
+Title_img:ChiQin.jpg;
+Title_bgm:夏影.mp3;

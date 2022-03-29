@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>沐沐大乐透</title>
+	<link href="aside.css" rel="stylesheet" type="text/css"/>
+	<style>
+		* {
+            margin: 0;
+            padding: 0;
+            font-family: "楷体";
+        }
+        a {
+        	text-decoration-line: none;
+			color: #000000;
+        }
+
+		.section{
+			position: absolute;
+			width: 570px;
+			height: 350px;
+			background-color: rgba(0,0,0,.3);
+			margin: 165px auto 0;
+			text-align: center;
+			top: 70px;
+			left: 950px;
+		}
+		.section h2{
+			height: 90px;
+			line-height: 90px;
+			font-size: 40px;
+			color:#fff;
+		}
+		.section{
+			color: #fff;
+		}
+		.s-result{
+			color: #fff;
+			font-size: 30px;
+			font-weight: bold;
+		}
+		.intro-result{
+			color: #fff;
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.btn{
+			position:absolute;
+			left: 50%;
+			margin-left: -161px;
+			bottom: -40px;
+			width: 323px;
+			height: 81px;
+			border-radius: 30px;
+			background-color: #000;
+			cursor:pointer;
+		}
+		.btn p{
+			line-height: 81px;
+			font-size: 50px;
+			color: #fff;
+		}
+
+		.bg{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 1530px;
+			height: 710px;
+			z-index: -1;
+			opacity: 0.7;
+		}
+		.content .lucky-draw-img {
+			position: absolute; 
+			left: 660px;
+			top: 250px;
+			width: 200px;
+			height: 300px;
+			transform: rotate(0deg) rotateY(0deg) rotateX(0deg);
+		}
+		.content .lucky-draw-content {
+			position: absolute;
+			font: 30px "楷体";
+			top: 555px;
+			left: 676px;
+		}
+		.content .summary-img {
+			position: absolute;
+			left: 368px;
+			top: 311px;
+			width: 150px;
+			height: 70px;
+			transform: rotate(0deg) rotateY(-20deg) rotateX(0deg);
+		}
+		.content .summary-content {
+			position: absolute;
+			font: 25px "楷体";
+			top: 385px;
+			left: 395px;
+		}
+		.content .control-img {
+			position: absolute;
+			left: 200px;
+			top: 447px;
+			width: 200px;
+			height: 100px;
+			transform: rotate(0deg) rotateY(-20deg) rotateX(0deg);
+		}
+		.content .control-content {
+			position: absolute;
+			font: 20px "楷体";
+			top: 534px;
+			left: 254px;
+			transform: rotate(-11deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+	  <img src="室内背景.jpg" class="bg">
+	  <a href="javascript:void(0);" onclick="start()"><img src="传送门.png" class="lucky-draw-img"></a>
+	  <div class="lucky-draw-content">
+	  	<a href="javascript:void(0);" onclick="start()">沐沐大乐透</a>
+	  </div>
+	  <a href="summary/index.html"><img src="壁挂屏幕.png" class="summary-img"></a>
+	  <div class="summary-content">
+	  	<a href="summary.html">奖品图鉴</a>
+	  </div>
+	  <a href="http://jinfumoniqi.mikecrm.com/2pekuP8"><img src="控制台-抠图.png" class="control-img"></a>
+	  <div class="control-content">
+	  	<a href="http://jinfumoniqi.mikecrm.com/2pekuP8">回忆提交入口</a>
+	  </div>
+	</div>
+	<div class="section">
+		<h2>沐沐大乐透</h2>
+		<div class="s-result"></div>
+		<div class="intro-result">缘分无常，涩涩匆匆，人来人往间，回忆慢慢消逝……欢迎来到领地的纪念品商店，这里是记录着回忆的地方，请随机抽取，看看你与哪个人的记忆有缘。当然，也希望你能在这里停留一下，占用你一点点时间，留下一点自己的专属回忆，见证着你曾经来过。</div>
+	</div>
+	<script>
+		var arr = [
+			['年糕的藏品', '由年糕赞助的一个袜子盒，里面都是笨蛋年糕手机的藏品，沐沐大概能认出来其中一格里装的是璃落的白色裤袜，其它的就不知道啦'],
+			['破晓的狗狗服', '又温暖又紧实的狗狗服，在膝盖和手肘处都有软垫哦～'],
+			['璃落的项圈', '璃落专属项圈，加绒的哦~项圈外侧写着“沐沐”两个字'],
+			['蒲公英的指挥官制服', '大红色的呢子外套，象征着他在2062年之后的人生'],
+			['东海帝王的特制hachimi饮料', '喝下去，会进入发情状态，并且会被东海帝王关进帝下室'],
+			['桃子的特制口。。。球？', '完全是双头棒棒，根本看不出来口球的样子。不过为什么，抽到这个道具还会送俩个被短细链连一起项圈啊喂！'],
+			['小夜的深喉马具口球', '外观看上去就像是个普通的马具口球，上方带着像马娘一样的可爱耳朵。会激起人忍不住带上的欲望，一旦带上了，所有锁扣自动锁死，皮带贴紧皮肤。然后深喉的部分贴紧口腔，让人咬起来非常舒服'],
+			['星若的病历', '星若随身携带的一份病历，上面记录了她们的症状……'],
+			['狐狸神社的神乐铃', '不知道从哪里来的神乐铃，可以秽除一些奇怪的东西'],
+			['笙宇的春药', '据说领地的人都被灌过'],
+			['清雨书房里的笔记本', '一个精致的笔记本，记载着清雨涩涩的经历，但如果贸然翻开的话估计会遭到她无时无刻的报复'],
+			['沐沐的皮卡丘抱枕', '超大超软的皮卡丘抱枕，整个人都可以呋哇呋哇的陷进去哦～超大空间的内容物方便沐沐把自缚道具藏进去不被发现，抱枕套有时也用来套住别人（璃落）来伪装成沐沐，替代沐沐被迫害~'],
+			['触手宝宝', '被触手玩是很舒服的呢~不来试试吗~'],
+                                                ['一段周游群星的记忆','阿塔妮丝周游群星时留下的记忆，代表了她负罪离开艾尔周游群星，寻找一个不知为何的答案的岁月，这段记忆并不稳定，如得到，请小心保管'],
+                                                ['慕纱的魔法画册','表面镶嵌着封印石的精美书籍，里面展现着各种各样的奇幻而又涩涩的冒险故事，散溢出的魔法如醉人的美酒让读者身临其境，可不要被勾引的太久哟，不然就出不来了~'],
+                                                ['持琴的手帕', '博物馆级别的华丽丝帕，持有时会被女鬼小姐索要，可以用来堵住她的嘴巴']
+                                                ['幽灵的无限小监狱','半人高的小监狱深不见底，只见过进去的女孩子从来没人见过有人出来']
+		]
+
+		var oResult = document.getElementsByClassName('s-result')[0];
+		var introResult = document.getElementsByClassName('intro-result')[0];
+		var step = 1;
+		var cnt = 1;
+		var flag = true;
+		var index = 0;
+		function start(){
+			if(flag){
+				step = 1;
+				creatName();
+				flag = false;
+			}else{
+				// oResult.innerHTML = '';
+				step = 1;
+				creatName();
+			}
+		}
+		function creatName(){
+			if(step > cnt){
+				return null;
+			}
+			step++;
+			
+			var dis = 1;
+			var maxDis = 30;
+			var mySet = setInterval(function(){
+				dis++;
+				if(dis > maxDis){
+					oResult.innerHTML = '<p>' + arr[index][0] + '</p>';
+					introResult.innerHTML = '<p>' + arr[index][1] + '</p>';
+					clearInterval(mySet);
+					creatName();
+					return null;
+				}
+				index = Math.floor(Math.random()*(arr.length-1))
+				oResult.innerHTML = arr[index][0];
+			},50);
+		}
+	</script>
+</body>
+</html>

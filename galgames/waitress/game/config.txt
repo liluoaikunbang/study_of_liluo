@@ -1,0 +1,4 @@
+Game_name:笨笨的服务员（璃落x语嫣）;
+Game_key:0f86fdGr;
+Title_img:YvYan.jpg;
+Title_bgm:夏影.mp3;

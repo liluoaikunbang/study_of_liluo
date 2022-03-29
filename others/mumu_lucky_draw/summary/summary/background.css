@@ -1,0 +1,378 @@
+﻿body {
+    height: 100%;
+    clear: both;
+    margin: 0;
+}
+
+#demo {
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    z-index:5;
+}
+
+.Register {
+    height: 22%;
+    width: 30%;
+    margin: 300px auto 0 auto;
+    text-align: center;
+    line-height: 100px;
+    box-shadow: 0 0 10px #cbcbcb;
+    border-left: 0.3px solid #e2dbb9;
+    border-top: 0.3px solid #cbcbcb;
+    border-bottom: 0.3px solid #cbcbcb;
+    border-right: 0.3px solid #cbcbcb;
+}
+
+.RegisterSubmit {
+    border: 1px solid rgba(193, 77, 169, 0.70) !important;
+    background: rgba(255, 255, 255, 0.00) !important;
+    box-shadow: 0 0 10px #cbcbcb !important;
+}
+
+#header {
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    display: none;
+}
+
+#body {
+    /*padding-top: 9.5vh;*/
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: none;
+}
+
+#container {
+    min-width: 500px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: 0 10px 5px 10px;
+    width: 80% - 20px;
+    height: 100%;
+    float: left;
+}
+
+#chatterlist {
+    position: fixed;
+    right: 0;
+    /*top: 51;*/
+    width: 20%;
+    background-color: rgba(129, 119, 127, 0.10);
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-align: center;
+}
+
+.chatterlist-head {
+    margin: 0;
+    padding: 5px 0 5px 10px;
+    width: 100% - 10px;
+    color: white;
+    background-color: rgba(129, 119, 127, 0.40);
+    font-size: 14px;
+}
+
+.userlist-item {
+    margin: 0;
+    text-align: center;
+    padding: 4px 0;
+    font-size: 13px;
+    border-bottom: 1px solid #ddd;
+}
+
+.time {
+    width: fit-content;
+    padding: 2px 8px 2px 8px;
+    font-size: 8px;
+    color: gray;
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.content {
+    width: fit-content;
+    padding: 2px 10px 2px 10px;
+    font-size: 14px;
+    color: #2196f3;
+    border: 0.4px solid #2196f3;
+    box-shadow: 0 0 5px #2196f3;
+    /*border: 2px solid rgba(75,127,199,0.9);
+    background-color: rgba(74, 59, 114,0.9);*/
+    border-radius: 3px;
+    max-width: 70%;
+    margin: 0;
+    margin-top: 5px;
+    /*字体换行*/
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.FontColor {
+    color: #000;
+    /*line-height:23px;*/
+}
+
+#btn, #setname {
+    height: 30px;
+    width: 65px;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 2px 10px 2px 10px;
+    color: #fff;
+    background-color: #2196f3;
+    border: 1px solid #00a1b6;
+    outline: none;
+    cursor: pointer;
+}
+
+    #btn:hover, #setname:hover {
+        color: #2196f3;
+        border: 1px solid #2196f3;
+        background-color: #fff;
+        transition: 0.4s;
+    }
+
+#name, #text {
+    height: 30px;
+    width: 60%;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 1px solid #9fafb1;
+    box-shadow: #ddd;
+    padding-left: 10px;
+    outline: none
+}
+
+#text {
+    width: 60% !important;
+}
+
+#name:focus {
+    border: 1px solid #00a1b6;
+    transition: 1s;
+}
+
+#text:focus {
+    border: 1px solid #00a1b6;
+    transition: 1s;
+}
+
+
+
+@media screen and (max-width: 420px) {
+
+    .Register {
+        /*height: 15%;*/
+        width: 80%;
+        margin: 250px auto 0 auto;
+        padding: 20px 0;
+        text-align: center;
+        line-height: 50px;
+        box-shadow: 0 0 10px #cbcbcb;
+        border-left: 0.3px solid #e2dbb9;
+        border-top: 0.3px solid #cbcbcb;
+        border-bottom: 0.3px solid #cbcbcb;
+        border-right: 0.3px solid #cbcbcb;
+    }
+
+
+    #header {
+        padding: 2px 2px 8px 8px;
+    }
+
+    #name, #text {
+        width: 20vw;
+        height: 30px;
+        font-size: 12px;
+        margin: 5px 0 0 0;
+    }
+
+    #name {
+        width: 80%;
+    }
+
+    #text {
+        width: 75vw;
+    }
+
+    #body {
+        /*padding-top:12.5vh;*/
+        font-size: 12px;
+    }
+
+    #btn, #setname {
+        height: 30px;
+        line-height: 27px;
+        width: 15vw;
+        border-radius: 3px;
+        font-size: 12px;
+    }
+
+    .time {
+        border-radius: 2px;
+    }
+
+    .content {
+        border-radius: 2px;
+        max-width: 70vw;
+        font-size: 12px;
+    }
+
+    #chatterlist {
+        width: 18vw;
+        text-align: center;
+    }
+
+    .chatterlist-head {
+        padding: 5px;
+        text-align: center;
+    }
+
+    .userlist-item {
+        font-size: 10px;
+    }
+}
+
+
+
+
+
+/**********************/
+
+.wall {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+div#background {
+    position: fixed;
+    z-index: -1;
+    background: url('https://amayaliu.cn/images/lingyan2_1.webp') no-repeat;
+    background-size: cover;
+    opacity: 0.95;
+}
+
+div#midground {
+    position: fixed;
+    z-index: -1;
+    background-image: url('https://amayaliu.cn/images/midground.webp');
+    -webkit-animation: cc 100s linear infinite;
+    -moz-animation: cc 100s linear infinite;
+    -o-animation: cc 100s linear infinite;
+    animation: cc 100s linear infinite;
+}
+
+div#foreground {
+    position: fixed;
+    background-image: url('https://amayaliu.cn/images/foreground.webp');
+    z-index: -1;
+    -webkit-animation: cc 153s linear infinite;
+    -o-animation: cc 153s linear infinite;
+    -moz-animation: cc 153s linear infinite;
+    animation: cc 153s linear infinite;
+}
+
+div#top {
+    position: fixed;
+    background-image: url('https://amayaliu.cn/images/midground.webp');
+    z-index: -1;
+    -webkit-animation: dd 100s linear infinite;
+    -o-animation: dd 100s linear infinite;
+    animation: da 100s linear infinite;
+}
+
+@-webkit-keyframes cc {
+    from {
+        background-position: 0 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        background-position: 400% 0;
+    }
+}
+
+@-o-keyframes cc {
+    from {
+        background-position: 0 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        background-position: 400% 0;
+    }
+}
+
+@-moz-keyframes cc {
+    from {
+        background-position: 0 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        background-position: 400% 0;
+    }
+}
+
+@keyframes cc {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 400% 0;
+    }
+}
+
+@keyframes da {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 400%;
+    }
+}
+
+@-webkit-keyframes da {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 400%;
+    }
+}
+
+@-moz-keyframes da {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 400%;
+    }
+}
+
+@-ms-keyframes da {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 400%;
+    }
+}

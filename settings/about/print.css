@@ -1,0 +1,32 @@
+@media print{
+  body {
+    padding: 0;
+    background-color: #fff;
+  }
+  
+  .content {
+    margin-top: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .btn_wrap,
+  .github-footer {
+    display: none;
+  }
+  
+  .content .link {
+    display: block;
+  }
+  
+  .content.page2 {
+    margin-top: 0;
+    page-break-before: always;
+  }
+  .statement{
+    display: none;
+  }
+  .page_footer_wrap .link{
+    display: block;
+  }
+}

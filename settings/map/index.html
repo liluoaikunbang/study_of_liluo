@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>领地地图</title>
+	<link href="aside.css" rel="stylesheet" type="text/css"/>
+	<style>
+		* {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+        	background-color: #7CCD7C;
+        }
+        a {
+        	text-decoration-line: none;
+			color: #000000;
+        }
+
+        .bg{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 500px;
+			height: 500px;
+			z-index: -1;
+			opacity: 0.7;
+			overflow-x: scroll;
+			overflow-y: scroll;
+		}
+		.home {
+			position: fixed;
+			top: 10px;
+			left: 10px;
+			font: 30px "楷体";
+			height: 30px;
+			width: 240px;
+		}
+		.terrain1 {
+			position: absolute; 
+			left: 2000px; 
+			top: -5px;
+		}
+		.terrain1 .terrain1-img {
+			width: 300px;
+			height: 200px;
+			transform: rotate(0deg) rotateY(0deg) rotateX(0deg);
+		}
+		.terrain1 .terrain1-content {
+			position: absolute;
+			transform: rotate(0deg);
+			font: 24px "楷体";
+			top: 200px;
+			left: 80px;
+			width: 96px;
+			height: 24px;
+		}
+		.item1 {
+			position: absolute; 
+			left: 300px; 
+			top: 200px;
+		}
+		.item1 .item1-img {
+			width: 300px;
+			height: 200px;
+			transform: rotate(0deg) rotateY(0deg) rotateX(0deg);
+		}
+		.item1 .item1-content {
+			position: absolute;
+			transform: rotate(30deg);
+			font: 24px "楷体";
+			top: 150px;
+			left: -30px;
+			width: 216px;
+			height: 24px;
+		}
+		.item2 {
+			position: absolute; 
+			left: 1000px; 
+			top: 700px;
+		}
+		.item2 .item2-img {
+			width: 300px;
+			height: 200px;
+			transform: rotate(0deg) rotateY(0deg) rotateX(0deg);
+		}
+
+		.item2 .item2-content {
+			position: absolute;
+			transform: rotate(30deg);
+			font: 24px "楷体";
+			top: 160px;
+			left: 0px;
+			width: 120px;
+			height: 24px;
+		}
+		.item3 {
+			position: absolute; 
+			left: 1000px; 
+			top: 150px;
+		}
+		.item3 .item3-img {
+			width: 260px;
+			height: 200px;
+			transform: rotate(0deg) rotateY(0deg) rotateX(0deg);
+		}
+		.item3 .item3-content {
+			position: absolute;
+			transform: rotate(20deg);
+			font: 24px "楷体";
+			top: 160px;
+			left: 10px;
+			width: 120px;
+			height: 24px;
+		}
+		.item4 {
+			position: absolute; 
+			left: 50px; 
+			top: 300px;
+		}
+		.item4 .item4-img {
+			width: 260px;
+			height: 300px;
+			transform: rotate(0deg) rotateY(0deg) rotateX(0deg);
+		}
+		.item4 .item4-content {
+			position: absolute;
+			transform: rotate(26deg);
+			font: 24px "楷体";
+			top: 250px;
+			left: 15px;
+			width: 120px;
+			height: 24px;
+		}
+		.item5 {
+			position: absolute; 
+			left: 10px; 
+			top: 1100px;
+		}
+		.item5 .item5-img {
+			width: 260px;
+			height: 300px;
+			transform: rotate(0deg) rotateY(0deg) rotateX(0deg);
+		}
+		.item5 .item5-content {
+			position: absolute;
+			transform: rotate(26deg);
+			font: 24px "楷体";
+			top: 220px;
+			left: 20px;
+			width: 96px;
+			height: 24px;
+		}
+		.item6 {
+			position: absolute; 
+			left: 1600px; 
+			top: 5px;
+		}
+		.item6 .item6-img {
+			width: 260px;
+			height: 300px;
+			transform: rotate(0deg) rotateY(0deg) rotateX(0deg);
+		}
+		.item6 .item6-content {
+			position: absolute;
+			transform: rotate(30deg);
+			font: 24px "楷体";
+			top: 200px;
+			left: -30px;
+			width: 120px;
+			height: 24px;
+		}
+		.item7 {
+			position: absolute; 
+			left: 1600px; 
+			top: 1500px;
+			z-index: 2;
+		}
+		.item7 .item7-img {
+			width: 280px;
+			height: 250px;
+			transform: rotate(0deg) rotateY(0deg) rotateX(0deg);
+		}
+		.item7 .item7-content {
+			position: absolute;
+			transform: rotate(0deg);
+			font: 24px "楷体";
+			top: 215px;
+			left: 50px;
+			width: 144px;
+			height: 24px;
+		}
+		.item8 {
+			position: absolute; 
+			left: 600px; 
+			top: 500px;
+		}
+		.item8 .item8-img {
+			width: 150px;
+			height: 150px;
+			transform: rotate(0deg) rotateY(0deg) rotateX(0deg);
+		}
+		.item8 .item8-content {
+			position: absolute;
+			transform: rotate(0deg);
+			font: 24px "楷体";
+			top: 147px;
+			left: 10px;
+			width: 120px;
+			height: 24px;
+		}
+		.item9 {
+			position: absolute; 
+			left: 200px; 
+			top: 650px;
+		}
+		.item9 .item9-img {
+			width: 200px;
+			height: 260px;
+			transform: rotate(0deg) rotateY(0deg) rotateX(0deg);
+		}
+		.item9 .item9-content {
+			position: absolute;
+			transform: rotate(-34deg);
+			font: 24px "楷体";
+			top: 220px;
+			left: 75px;
+			width: 192px;
+			height: 24px;
+		}
+	</style>
+</head>
+<body>
+	<!--<img src="background.jpg" class="bg">-->
+	<aside class="box" id="box">
+        <button id="aside-btn" onclick="change_aside()">三</button>
+        <div class="aside-content" id="aside-content">
+	        <ul>
+	    		<li><h3>璃落领地</h3></li>
+	    		<p>由璃落建立的属于璃落的小世界，聚集了来自各处的各种种族的小可爱们。主要设施如下：</p>
+	    		<li><a href="#" class="aside-inside-content">璃落领地-聊天室（qq）：601383471</a></li>
+	            <li><a href="https://liluoaikunbang.github.io" class="aside-inside-content">璃落的小窝</a></li>
+	        </ul>
+        </div>
+    </aside>
+    <div class="home">
+    	<a href="#" class="aside-inside-content" onclick="home_function()">欢迎来到璃落领地</a>
+    </div>
+
+    <div class="terrain1">
+	  <a href="javascript:void(0);" onclick="item1_function()"><img src="深渊之森.png" class="terrain1-img"></a>
+	  <a class="terrain1-content" href="javascript:void(0);" onclick="item1_function()">深渊之森</a>
+	</div>
+
+	<div class="item1">
+	  <a href="javascript:void(0);" onclick="item1_function()"><img src="沐沐球笼-璃落小窝.png" class="item1-img"></a>
+	  <a class="item1-content" href="javascript:void(0);" onclick="item1_function()">沐沐球笼-璃落小窝</a>
+	</div>
+	<div class="item2">
+	  <a href="javascript:void(0);" onclick="item1_function()"><img src="持琴的寺庙.png" class="item2-img"></a>
+	  <a class="item2-content" href="javascript:void(0);" onclick="item1_function()">持琴的寺庙</a>
+	</div>
+	<div class="item3">
+	  <a href="javascript:void(0);" onclick="item1_function()"><img src="逗鲨的山洞.png" class="item3-img"></a>
+	  <a class="item3-content" href="javascript:void(0);" onclick="item1_function()">逗鲨的山洞</a>
+	</div>
+	<div class="item4">
+	  <a href="javascript:void(0);" onclick="item1_function()"><img src="沐沐疗养院.png" class="item4-img"></a>
+	  <a class="item4-content" href="javascript:void(0);" onclick="item1_function()">沐沐疗养院</a>
+	</div>
+	<div class="item5">
+	  <a href="javascript:void(0);" onclick="item1_function()"><img src="闹鬼老屋.png" class="item6-img"></a>
+	  <a class="item5-content" href="javascript:void(0);" onclick="item1_function()">闹鬼老屋</a>
+	</div>
+	<div class="item6">
+	  <a href="javascript:void(0);" onclick="item1_function()"><img src="野生触手池.png" class="item6-img"></a>
+	  <a class="item6-content" href="javascript:void(0);" onclick="item1_function()">野生触手池</a>
+	</div>
+	<div class="item7">
+	  <a href="javascript:void(0);" onclick="item1_function()"><img src="灰风的金字塔.png" class="item7-img"></a>
+	  <a class="item7-content" href="javascript:void(0);" onclick="item1_function()">灰风的金字塔</a>
+	</div>
+	<div class="item8">
+	  <a href="javascript:void(0);" onclick="item1_function()"><img src="中心传送门.png" class="item8-img"></a>
+	  <a class="item8-content" href="javascript:void(0);" onclick="item1_function()">中心传送门</a>
+	</div>
+	<div class="item9">
+	  <a href="javascript:void(0);" onclick="item1_function()"><img src="超美味袜子分店.png" class="item9-img"></a>
+	  <a class="item9-content" href="javascript:void(0);" onclick="item1_function()">超美味袜子分店</a>
+	</div>
+	<script>
+		change_aside()
+		function change_aside() {
+			if (box.offsetLeft == 0) {
+                box.style['margin-left'] = -300 + "px"
+            } else {
+                box.style['margin-left'] = 0 + "px"
+            }
+		}
+		function open_aside() {
+			if (box.offsetLeft != 0) {
+				change_aside()
+			}
+		}
+		function home_function() {
+			open_aside()
+			content.innerHTML = '\
+			<ul>\
+	    		<li><h3>璃落领地</h3></li>\
+	    		<p>由璃落建立的属于璃落的小世界，聚集了来自各处的各种种族的小可爱们。主要设施如下：</p>\
+	    		<li><a href="#" class="aside-inside-content">璃落领地-聊天室（qq）：601383471</a></li>\
+	            <li><a href="https://liluoaikunbang.github.io" class="aside-inside-content">璃落的小窝</a></li>\
+	        </ul>'
+	    }
+		function item1_function() {
+			open_aside()
+			content.innerHTML = '\
+			<ul>\
+	        	<li><h3>沐沐球笼-璃落小窝</h3></li>\
+	        	<p>沐沐和璃落居住的地方。主要设施如下：</p>\
+	        	<li><a href="https://liluoaikunbang.github.io/study_of_liluo" class="aside-inside-content">璃落的小窝-书房</a></li>\
+	        	<li><a href="mumu_lucky_draw/index.html" class="aside-inside-content">沐沐大乐透</a></li>\
+	        </ul>'
+		}
+		box = document.getElementById('box')
+		content = document.getElementById("aside-content")
+	</script>
+</body>
+</html>
